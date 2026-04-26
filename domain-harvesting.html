@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Automated harvesting logic in Agri-Sense." />
+  <title>Domain | Automated Harvesting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Urbanist:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">Agri-Sense</a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a class="active" href="domain.html">Domain</a>
+      <a href="milestones.html">Milestones</a>
+      <a href="documents.html">Documents</a>
+      <a href="slides.html">Slides</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section page-hero">
+      <p class="eyebrow">Domain / Automated Harvesting</p>
+      <h2>Automated Harvesting and Intervention Flow</h2>
+      <p class="section-text">This section captures the full harvesting pipeline from ripeness perception to safe fruit plucking, as described in the Agri-Sense paper.</p>
+
+      <article class="card expand-card">
+        <details open>
+          <summary>Step 1: Ripeness Detection and Target Selection</summary>
+          <p>The edge AI model classifies ripe and unripe tomatoes in real time. When multiple ripe detections appear in one frame, the system selects the highest-confidence instance as the actuation target to ensure deterministic arm behavior.</p>
+        </details>
+        <details>
+          <summary>Step 2: Stable Perception for Motion Control</summary>
+          <p>Instead of directly controlling the arm from fluctuating video boxes, Agri-Sense uses snapshot-based inference. This decouples perception from actuation timing and reduces coordinate jitter during arm movement.</p>
+        </details>
+        <details>
+          <summary>Step 3: Spatial Mapping and Kinematics</summary>
+          <p>For harvesting, the system computes full (X, Y, Z) coordinates. The Z-axis is estimated via monocular focal-length logic. Then inverse kinematics is solved for the 4-DOF robotic arm to position the end-effector accurately.</p>
+        </details>
+        <details>
+          <summary>Step 4: Non-Destructive Plucking</summary>
+          <p>The modular 3D-printed gripper executes a torque-limited plucking sequence to avoid damaging fruit and nearby foliage. This directly supports precision harvesting under dense greenhouse conditions.</p>
+        </details>
+        <details>
+          <summary>Step 5: Dual-Mode Operation with Disease Intervention</summary>
+          <p>The same arm switches to spraying mode for pathology treatment. Lesion detections are clustered spatially to produce one optimized centroid spray target, minimizing unnecessary arm motion and reducing chemical usage.</p>
+        </details>
+        <details>
+          <summary>Step 6: Post-Action Verification and Recovery</summary>
+          <p>After each harvest or spray action, the system re-captures a validation frame to confirm target completion. If confidence remains low or target status is uncertain, the robot defers repeat action and raises an operator alert instead of applying uncontrolled interventions.</p>
+        </details>
+      </article>
+
+      <div class="cards two-col domain-top-grid">
+        <article class="card">
+          <h3>Why This Matters</h3>
+          <p>Most systems stop at diagnostics. Agri-Sense closes the loop by turning ripeness and disease detections into direct physical action through reliable robotic manipulation.</p>
+        </article>
+        <article class="card">
+          <h3>Safety and Reliability</h3>
+          <p>The platform maintains fixed safe spraying distance and confidence-aware decision thresholds. Unknown or low-confidence detections trigger GSM alerts to the greenhouse owner.</p>
+        </article>
+      </div>
+
+      <p class="section-text"><a class="inline-link" href="domain.html">Back to Domain Hub</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Agri-Sense. All rights reserved.</p>
+    <a href="domain.html">Back to Domain</a>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,156 +1,60 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>AgriSense - Smart Agriculture System</title>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f5f5f5;
-        }
-
-        header {
-            background: #1e293b;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        section {
-            background: white;
-            margin: 20px;
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-        h2 {
-            color: #1e293b;
-        }
-
-        ul {
-            line-height: 1.8;
-        }
-
-        footer {
-            background: #111827;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            font-size: 14px;
-        }
-
-        .warning {
-            color: #facc15;
-            font-weight: bold;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Agri-Sense project website with multi-page navigation." />
+  <title>Agri-Sense | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Urbanist:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
+  <header class="site-header">
+    <a class="logo" href="index.html">Agri-Sense</a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="active" href="index.html">Home</a>
+      <a href="domain.html">Domain</a>
+      <a href="milestones.html">Milestones</a>
+      <a href="documents.html">Documents</a>
+      <a href="slides.html">Slides</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
 
-<header>
-    <h1>AgriSense Smart Agriculture System</h1>
-    <p>ONOS SDN + Edge AI + Secure Cloud Connectivity + Autonomous Robotics for Precision Farming</p>
-</header>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Project Introduction</p>
+        <h1>Agri-Sense: Autonomous Tomato Farming Robotic Vehicle</h1>
+        <p class="intro">
+          Agri-Sense is an integrated cyber-physical greenhouse platform combining edge AI,
+          robotic actuation, and resilient SDN-enabled communication to automate harvesting
+          and targeted disease intervention.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="purchase.html">Purchase</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true"></div>
+    </section>
+  </main>
 
-<section>
-    <h2>Project Scope</h2>
-    <p>
-        AgriSense is a smart farming system designed for rural Sri Lanka using IoT sensors, 
-        Software-Defined Networking (ONOS SDN), secure IPsec tunneling, and edge AI to enable
-        real-time crop monitoring, autonomous decision-making, and intelligent agricultural automation.
-    </p>
-</section>
-
-<section>
-    <h2>Research Problem</h2>
-    <p>
-        Rural agricultural environments suffer from unstable connectivity, lack of real-time monitoring,
-        and inefficient bandwidth usage, leading to delayed irrigation control, poor crop health decisions,
-        and limited automation capabilities for farming operations.
-    </p>
-</section>
-
-<section>
-    <h2>Proposed Solution</h2>
-    <p>
-        A Raspberry Pi-based SDN edge gateway powered by ONOS controller that manages IoT traffic,
-        integrates secure StrongSwan IPsec tunnels over Azure cloud VMs, and supports AI-based crop
-        monitoring using YOLO. The system also includes a 3D-printed robotic arm and an autonomous
-        path-detecting robot for precision agriculture tasks.
-    </p>
-</section>
-
-<section>
-    <h2>Technologies Used</h2>
-    <ul>
-        <li>Python (Edge AI + SDN Controller)</li>
-        <li>Raspberry Pi 5</li>
-        <li>OpenFlow / ONOS SDN</li>
-        <li>Open vSwitch (OVS)</li>
-        <li>LoRa / ESP32 IoT Sensors</li>
-        <li>TensorFlow / YOLO (AI Detection)</li>
-        <li>StrongSwan IPsec VPN + Azure Virtual Machines</li>
-        <li>3D Printed Robotic Arm</li>
-        <li>Autonomous Path-Detecting Robot</li>
-    </ul>
-</section>
-
-<section>
-    <h2>System Features</h2>
-    <ul>
-        <li>Real-time soil moisture, temperature, humidity monitoring</li>
-        <li>AI-based crop health and disease detection using YOLO</li>
-        <li>SDN-based traffic prioritization (QoS control via ONOS)</li>
-        <li>Secure IPsec tunneling between edge and Azure cloud</li>
-        <li>Autonomous robotic navigation for field inspection</li>
-        <li>3D-printed robotic arm for precision farming tasks</li>
-        <li>Edge-based decision making for low-latency control</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Milestones</h2>
-    <ul>
-        <li>Project Proposal</li>
-        <li>System Design & Architecture</li>
-        <li>SDN Controller Implementation (ONOS)</li>
-        <li>IoT Sensor Integration</li>
-        <li>AI Model Training & Deployment (YOLO)</li>
-        <li>Robotic System Integration</li>
-        <li>Final Testing & Evaluation</li>
-        <li>Final Report & Presentation</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Research Team</h2>
-    <ul>
-        <li>Yomal M. S.</li>
-        <li>Bandara K. M. D. I.</li>
-        <li>Weerasekara W. M. G. V.</li>
-        <li>Nilessh P.</li>
-    </ul>
-</section>
-
-<section>
-    <h2>About</h2>
-    <p>
-        This project is a final year undergraduate research initiative focusing on
-        SDN-based networking (ONOS), secure cloud connectivity (StrongSwan IPsec over Azure),
-        edge AI systems, and autonomous robotics for smart agriculture in rural environments.
-    </p>
-</section>
-
-<footer>
-    <span class="warning">NOTE:</span>
-    This website is a research prototype and contains test or simulated data.
-</footer>
-
+  <footer class="site-footer">
+    <p>&copy; 2026 Agri-Sense. All rights reserved.</p>
+    <a href="index.html">Back to home</a>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Methodology for Agri-Sense research domain." />
+  <title>Domain | Methodology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Urbanist:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">Agri-Sense</a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a class="active" href="domain.html">Domain</a>
+      <a href="milestones.html">Milestones</a>
+      <a href="documents.html">Documents</a>
+      <a href="slides.html">Slides</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section page-hero">
+      <p class="eyebrow">Domain / Methodology</p>
+      <h2>Proposed Methodology</h2>
+      <p class="section-text">Agri-Sense follows a closed-loop Sense-Think-Act framework optimized for greenhouse conditions and rural connectivity limits.</p>
+
+      <article class="card expand-card">
+        <details open>
+          <summary>Sense: Navigation and Data Acquisition</summary>
+          <p>The robot uses an IR-reflective sensor array with PID-based path following to stay centered in greenhouse corridors. A LoRa mesh built on ESP32 nodes captures humidity, temperature, and soil conditions for continuous edge awareness.</p>
+        </details>
+        <details>
+          <summary>Think: Edge Intelligence Pipeline</summary>
+          <p>Containerized YOLOv11 runs on Raspberry Pi 5 for dual-cycle inference: ripeness classification and foliar pathology detection. The system uses snapshot-based inference to reduce bounding-box jitter and applies a 0.5 confidence threshold for novelty handling.</p>
+        </details>
+        <details>
+          <summary>Automated Harvesting Cycle</summary>
+          <p>When multiple ripe fruits are detected, the highest-confidence instance is selected as the actuation target. The system maps detections into (X,Y,Z) coordinates, estimates depth for Z, and uses inverse kinematics to guide the 4-DOF arm and torque-limited gripper for safe harvesting.</p>
+        </details>
+        <details>
+          <summary>Disease Intervention Cycle</summary>
+          <p>For foliar lesions, detections are clustered to compute a single centroid target. The nozzle aligns on (X,Y) while keeping fixed spray distance to avoid contact. This minimizes redundant arm motion and reduces chemical usage.</p>
+        </details>
+        <details>
+          <summary>Act: Precision Intervention</summary>
+          <p>The robotic arm switches between a modular gripper for fruit plucking and a sprayer nozzle for pathology treatment. This dual-mode actuation converts AI detections into direct physical response without manual intervention.</p>
+        </details>
+        <details>
+          <summary>Network Integrity: QoS and Failover</summary>
+          <p>An SDN control plane (ONOS + OVS) prioritizes intervention packets over routine telemetry. The architecture supports failover from primary links to backup channels using secure VPN-assisted connectivity.</p>
+        </details>
+        <details>
+          <summary>LoRa Mesh Routing and Link Adaptation</summary>
+          <p>ESP32 nodes use multi-hop LoRa routing so obstructed nodes can relay through neighbors instead of failing silently. The control layer monitors RSSI/SNR trends and can tune communication settings to maintain reliability in humid, high-density foliage environments.</p>
+        </details>
+        <details>
+          <summary>Alerting and Exception Handling</summary>
+          <p>If the model detects unknown symptoms or low-confidence anomalies, a GSM alert is sent to the greenhouse owner with context data, enabling supervised escalation when required.</p>
+        </details>
+      </article>
+
+      <p class="section-text"><a class="inline-link" href="domain.html">Back to Domain Hub</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Agri-Sense. All rights reserved.</p>
+    <a href="domain.html">Back to Domain</a>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

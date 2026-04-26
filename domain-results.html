@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Experimental results and analysis for Agri-Sense." />
+  <title>Domain | Experimental Results</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Urbanist:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">Agri-Sense</a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a class="active" href="domain.html">Domain</a>
+      <a href="milestones.html">Milestones</a>
+      <a href="documents.html">Documents</a>
+      <a href="slides.html">Slides</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section page-hero">
+      <p class="eyebrow">Domain / Experimental Results</p>
+      <h2>Experimental Results and Analysis</h2>
+
+      <article class="card expand-card">
+        <details open>
+          <summary>Vision Performance</summary>
+          <p>The ripeness model achieved mAP@0.5 of 0.937 with strong true positive rates for ripe and unripe classes. The multi-class foliar pathology model achieved mAP@0.5 of 0.636 across challenging disease categories.</p>
+        </details>
+        <details>
+          <summary>Edge Inference and Real-Time Suitability</summary>
+          <p>Dockerized deployment on Raspberry Pi 5 sustained an average inference latency of about 42ms, meeting real-time operation demands for a moving robot platform.</p>
+        </details>
+        <details>
+          <summary>Network Reliability Validation</summary>
+          <p>LoRa mesh operation maintained packet delivery above 98% in dense greenhouse conditions. Under simulated link failure, SDN-guided failover completed in around 165ms while preserving critical command flow.</p>
+        </details>
+        <details>
+          <summary>Operational Efficiency Outcome</summary>
+          <p>Spatial clustering for spray targeting reduced redundant arm movements and helped reduce chemical use by about 30%, improving sustainability and reducing intervention overhead.</p>
+        </details>
+        <details>
+          <summary>Cross-Domain Validation Insight</summary>
+          <p>The RP confirms that combining perception quality, actuation precision, and SDN-based continuity is more valuable than optimizing any single module in isolation. This is the main reason the platform remains functional during realistic greenhouse disturbances.</p>
+        </details>
+      </article>
+
+      <div class="cards two-col domain-top-grid">
+        <article class="card">
+          <h3>Metric Summary</h3>
+          <p>Key validated values include 0.937 ripeness mAP@0.5, 0.636 disease mAP@0.5, ~42ms edge inference, >98% LoRa packet delivery, and ~165ms SDN failover.</p>
+        </article>
+        <article class="card">
+          <h3>Practical Interpretation</h3>
+          <p>These measurements indicate the platform can preserve intervention quality under constrained rural connectivity while reducing unnecessary spray actions.</p>
+        </article>
+      </div>
+
+      <p class="section-text"><a class="inline-link" href="domain.html">Back to Domain Hub</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Agri-Sense. All rights reserved.</p>
+    <a href="domain.html">Back to Domain</a>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

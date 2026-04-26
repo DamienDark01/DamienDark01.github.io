@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="System architecture of Agri-Sense." />
+  <title>Domain | System Architecture</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Urbanist:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">Agri-Sense</a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a class="active" href="domain.html">Domain</a>
+      <a href="milestones.html">Milestones</a>
+      <a href="documents.html">Documents</a>
+      <a href="slides.html">Slides</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section page-hero">
+      <p class="eyebrow">Domain / System Architecture</p>
+      <h2>Layered System Architecture</h2>
+
+      <article class="card expand-card">
+        <details open>
+          <summary>Actuation and Mobility Layer</summary>
+          <p>An autonomous wheeled platform navigates greenhouse rows while maintaining arm reach. A 4-DOF robotic arm performs dual intervention with interchangeable end-effectors: gripper for harvesting and nozzle for spraying.</p>
+        </details>
+        <details>
+          <summary>Edge-Intelligence Layer</summary>
+          <p>A Raspberry Pi 5 runs containerized YOLO inference for ripeness and foliar disease detection. The perception module provides coordinate outputs for targeted actuation and novelty alerts.</p>
+        </details>
+        <details>
+          <summary>Resilient Networking Layer</summary>
+          <p>ESP32 LoRa mesh nodes collect environmental data and deliver it to the edge gateway. The SDN control plane (ONOS + OVS) enforces adaptive QoS, while VPN-based failover ensures continuity during primary link instability.</p>
+        </details>
+        <details>
+          <summary>Cross-Layer Data and Control Flow</summary>
+          <p>The architecture follows a strict scan-detect-act-feedback sequence: sensing data and images enter the edge-intelligence layer, detections are converted into actuation coordinates, and SDN policies prioritize command packets so robotic actions complete even during network stress.</p>
+        </details>
+      </article>
+
+      <div class="cards two-col domain-top-grid">
+        <article class="card">
+          <h3>Design Goal</h3>
+          <p>Ensure that high-precision mechanical actions are consistently supported by low-latency inference and reliable communication in rural greenhouse conditions.</p>
+        </article>
+        <article class="card">
+          <h3>Architecture Outcome</h3>
+          <p>The integrated cyber-physical stack enables continuous autonomous operation beyond passive monitoring, including direct harvesting and disease treatment actions.</p>
+        </article>
+      </div>
+
+      <p class="section-text"><a class="inline-link" href="domain.html">Back to Domain Hub</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Agri-Sense. All rights reserved.</p>
+    <a href="domain.html">Back to Domain</a>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
